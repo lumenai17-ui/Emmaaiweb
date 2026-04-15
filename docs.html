@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentacion — HelloEmma.ai</title>
+  <meta name="description" content="Documentacion tecnica y guia de inicio rapido para E.M.M.A. AI — plataforma multi-agente para Android.">
+  <meta name="theme-color" content="#F5F0E8">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260415">
+  <style>
+    .doc-section { margin-bottom: 4rem; }
+    .doc-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 1.5rem;
+    }
+    .doc-card h3 { margin-bottom: 0.8rem; }
+    .doc-card p { margin-bottom: 1rem; }
+    .doc-card ul { padding-left: 1.2rem; margin-bottom: 1rem; }
+    .doc-card ul li {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.8;
+      list-style: disc;
+    }
+    .doc-card ul li strong { color: var(--navy); }
+    .code-block {
+      background: var(--navy);
+      color: rgba(255,255,255,0.85);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      padding: 1.2rem 1.5rem;
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      line-height: 1.7;
+      margin: 1rem 0;
+    }
+    .code-block .comment { color: rgba(255,255,255,0.35); }
+    .doc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) { .doc-grid { grid-template-columns: 1fr; } }
+    .doc-pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.8rem 0; }
+    .toc {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 3rem;
+    }
+    .toc h3 { margin-bottom: 1rem; font-size:1.1rem; }
+    .toc a {
+      display: block;
+      padding: 0.4rem 0;
+      font-size: 0.92rem;
+      color: var(--green-dark);
+      font-weight: 500;
+      transition: color var(--duration-fast);
+    }
+    .toc a:hover { color: var(--navy); }
+  </style>
+</head>
+<body>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo-3d-clean.jpg" alt="E.M.M.A. AI">
+        HelloEmma.ai
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#features">Capacidades</a>
+        <a href="index.html#pricing">Planes</a>
+        <a href="docs.html" style="color:var(--navy); font-weight:600;">Docs</a>
+        <a href="licenses.html">Licencias</a>
+        <a href="index.html#cta" class="nav-cta">Obtener Acceso</a>
+      </div>
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="section" style="padding-top: calc(var(--nav-height) + 4rem); padding-bottom: 2rem;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2rem;">
+        <span class="eyebrow">Documentacion</span>
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem);">Todo lo que necesitas saber.</h1>
+        <p>Guias de inicio rapido, arquitectura, modelos de IA, plugins y referencia tecnica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TABLE OF CONTENTS ====== -->
+  <section style="padding: 0 0 2rem;">
+    <div class="container">
+      <div class="toc">
+        <h3>Contenido</h3>
+        <a href="#quickstart">1. Inicio Rapido</a>
+        <a href="#architecture">2. Arquitectura Multi-Agente</a>
+        <a href="#models">3. Modelos de IA</a>
+        <a href="#plugins">4. Sistema de Plugins (21 Built-in)</a>
+        <a href="#inputs">5. Que Lee (Ingestores)</a>
+        <a href="#outputs">6. Que Produce (Generadores)</a>
+        <a href="#voice">7. Voz e Idiomas</a>
+        <a href="#channels">8. Canales de Comunicacion</a>
+        <a href="#google">9. Google Workspace</a>
+        <a href="#godmode">10. God Mode y Telemetria</a>
+        <a href="#build">11. Build y Distribucion</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== QUICK START ====== -->
+  <section class="doc-section" id="quickstart" style="padding: 0 0 2rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">1. Inicio Rapido</h2>
+      <div class="doc-grid">
+        <div class="doc-card">
+          <h3>Acceso Anticipado (Usuarios)</h3>
+          <p>La forma mas rapida de empezar.</p>
+          <ul>
+            <li><strong>Descarga</strong> el APK desde la pagina de compra</li>
+            <li><strong>Instala</strong> habilitando "Origenes desconocidos" en Ajustes</li>
+            <li><strong>Abre E.M.M.A.</strong> y acepta los permisos</li>
+            <li>Ve a <strong>Settings</strong> y configura tu provider de IA</li>
+            <li>Abre <strong>La Forja</strong> para crear tu primer agente</li>
+          </ul>
+          <p style="font-size:0.85rem; color:var(--green-dark); font-weight:500;">Tiempo estimado: 2 minutos</p>
+        </div>
+        <div class="doc-card">
+          <h3>GitHub (Desarrolladores)</h3>
+          <p>Para quienes quieren compilar, auditar o contribuir.</p>
+          <div class="code-block">
+            <span class="comment"># Clonar el repositorio</span><br>
+            git clone https://github.com/lumenai17-ui/emma-ai.git<br><br>
+            <span class="comment"># Abrir en Android Studio</span><br>
+            <span class="comment"># Requiere JDK 17 + Android SDK 35</span><br><br>
+            <span class="comment"># Compilar debug</span><br>
+            ./gradlew assembleDebug<br><br>
+            <span class="comment"># Compilar release (requiere keystore)</span><br>
+            ./gradlew assembleRelease
+          </div>
+          <p style="font-size:0.85rem; color:var(--muted);">La version GitHub no incluye APK pre-compilado. Debes compilar desde el codigo fuente.</p>
+        </div>
+      </div>
+
+      <div class="doc-card" style="margin-top:1.5rem;">
+        <h3>Configurar tu Primer Provider de IA</h3>
+        <p>E.M.M.A. necesita al menos un cerebro para funcionar. Elige uno:</p>
+        <div class="doc-grid">
+          <div>
+            <h4 style="font-size:0.95rem; margin-bottom:0.5rem; color:var(--blue);">Cloud (OpenRouter)</h4>
+            <ul>
+              <li>Crea cuenta en <strong>openrouter.ai</strong></li>
+              <li>Genera una API key</li>
+              <li>En E.M.M.A. &rarr; Settings &rarr; LLM Provider &rarr; OpenRouter</li>
+              <li>Pega tu API key</li>
+              <li>Selecciona modelo (GPT-4o, Claude, Gemini, etc.)</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-size:0.95rem; margin-bottom:0.5rem; color:var(--green-dark);">Local (Ollama)</h4>
+            <ul>
+              <li>Instala <strong>Ollama</strong> en tu PC/servidor</li>
+              <li>Descarga un modelo: <code style="font-family:var(--font-mono); font-size:0.82rem; background:var(--bg); padding:0.15rem 0.4rem; border-radius:4px;">ollama pull gemma3</code></li>
+              <li>En E.M.M.A. &rarr; Settings &rarr; LLM Provider &rarr; Ollama</li>
+              <li>Ingresa la IP de tu servidor (ej: <code style="font-family:var(--font-mono); font-size:0.82rem; background:var(--bg); padding:0.15rem 0.4rem; border-radius:4px;">192.168.1.100:11434</code>)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ARCHITECTURE ====== -->
+  <section class="doc-section" id="architecture" style="padding: 0 0 2rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">2. Arquitectura Multi-Agente</h2>
+      <div class="doc-card">
+        <p>E.M.M.A. es un <strong>orquestador de enjambres de agentes IA</strong> (Agent Swarm Hub) con protocolo A2A (Agent-to-Agent).</p>
+        <div class="comparison-wrapper" style="margin-top:1.5rem;">
+          <table class="comparison-table">
+            <thead><tr><th>Modulo</th><th>Descripcion</th></tr></thead>
+            <tbody>
+              <tr><td>EmmaEngine (Supervisor)</td><td>Directora del sistema. Evalua y delega tareas sin resolver directamente, reduciendo alucinaciones</td></tr>
+              <tr><td>Agent Swarm Hub</td><td>Interfaz tipo WhatsApp para multiples agentes con threads independientes</td></tr>
+              <tr><td>Koog Engine (A2A)</td><td>Protocolo de enrutamiento que permite handoff de memoria comprimida entre agentes</td></tr>
+              <tr><td>Agent Factory ("La Forja")</td><td>Creador dinamico de agentes con System Prompt, icono y seleccion de cerebro</td></tr>
+              <tr><td>Compressive Handoff</td><td>Transferencia de contexto entre agentes bajo un mismo thread</td></tr>
+              <tr><td>Pre-Seed Automatico</td><td>Inyecta agentes pilares ("E.M.M.A. Chat", "Live Vision", "Deep Voice") al primer inicio</td></tr>
+              <tr><td>Hermes Tunnel</td><td>WebSocket persistente (OkHttp) para comunicacion bidireccional con servidor maestro</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <h3>Paquetes de Codigo Fuente (18 modulos)</h3>
+        <div class="doc-grid">
+          <div>
+            <ul>
+              <li><strong>a2a/</strong> — Protocolo Agent-to-Agent</li>
+              <li><strong>core/</strong> — Logica central y configuracion</li>
+              <li><strong>database/</strong> — Room DB (AgentConfig, ChatThread, Groups)</li>
+              <li><strong>email/</strong> — Servicio IMAP/SMTP directo</li>
+              <li><strong>files/</strong> — AttachmentManager + PublicFileWriter</li>
+              <li><strong>google/</strong> — Auth + Calendar + Drive + Gmail + Tasks</li>
+              <li><strong>llm/</strong> — Providers (OpenRouter, Ollama, Gemma, Custom)</li>
+              <li><strong>memory/</strong> — Gestion de memoria por agente</li>
+              <li><strong>network/</strong> — Conectividad y fetchers</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><strong>plugins/</strong> — Sistema de plugins (21 builtins)</li>
+              <li><strong>security/</strong> — EncryptedSharedPreferences, SecurePrefs</li>
+              <li><strong>service/</strong> — Background services</li>
+              <li><strong>telegram/</strong> — TelegramBotService (long-polling)</li>
+              <li><strong>telemetry/</strong> — Scanner ambiental + WorkManager</li>
+              <li><strong>tunnel/</strong> — Hermes WebSocket (Client + Manager + Service)</li>
+              <li><strong>ui/</strong> — Screens + Components + Theme</li>
+              <li><strong>vision/</strong> — CameraX + Face Detection + GPS Nav</li>
+              <li><strong>voice/</strong> — Deepgram STT/TTS + ElevenLabs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== AI MODELS ====== -->
+  <section class="doc-section" id="models" style="padding: 0 0 2rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">3. Modelos de IA</h2>
+      <div class="doc-grid">
+        <div class="doc-card">
+          <h3>Cloud (via OpenRouter)</h3>
+          <div class="doc-pill-row">
+            <span class="feature-pill">GPT-4o</span>
+            <span class="feature-pill">Claude 3.5+</span>
+            <span class="feature-pill">Gemini 2.5 Pro</span>
+            <span class="feature-pill">Llama 3.3</span>
+            <span class="feature-pill">+cientos mas</span>
+          </div>
+          <p style="font-size:0.88rem;">Acceso via API key de OpenRouter. Compatible con cualquier modelo del catalogo.</p>
+        </div>
+        <div class="doc-card">
+          <h3>Local / Edge (via Ollama)</h3>
+          <div class="doc-pill-row">
+            <span class="feature-pill">Gemma 4</span>
+            <span class="feature-pill">Qwen 3 MoE</span>
+            <span class="feature-pill">DeepSeek R1</span>
+            <span class="feature-pill">Command R+</span>
+          </div>
+          <p style="font-size:0.88rem;">Requiere servidor Ollama en red local o remoto. Modelos open-source.</p>
+        </div>
+        <div class="doc-card">
+          <h3>On-Device (100% Offline)</h3>
+          <div class="doc-pill-row">
+            <span class="feature-pill">Gemma 4 E2B</span>
+            <span class="feature-pill">Gemma 4 E4B</span>
+          </div>
+          <p style="font-size:0.88rem;">Formato <code style="font-family:var(--font-mono); font-size:0.8rem; background:var(--bg); padding:0.15rem 0.4rem; border-radius:4px;">.litertlm</code>. Motor LiteRT-LM 0.9. Inferencia directa en ARM sin internet.</p>
+        </div>
+        <div class="doc-card">
+          <h3>Custom API</h3>
+          <p style="font-size:0.88rem;">Cualquier endpoint compatible con <code style="font-family:var(--font-mono); font-size:0.8rem; background:var(--bg); padding:0.15rem 0.4rem; border-radius:4px;">/v1/chat/completions</code> (formato OpenAI). Configura URL base + API key en Settings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PLUGINS ====== -->
+  <section class="doc-section" id="plugins" style="padding: 0 0 2rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">4. Sistema de Plugins (21 Built-in)</h2>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead><tr><th>#</th><th>Plugin</th><th>Categoria</th><th>Descripcion</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>AnalyzeImagePlugin</td><td>Vision</td><td>OCR + descripcion de imagenes</td></tr>
+            <tr><td>2</td><td>CalendarOperatorPlugin</td><td>Productividad</td><td>CRUD de eventos + archivos .ics</td></tr>
+            <tr><td>3</td><td>CodeSandboxPlugin</td><td>Codigo</td><td>Ejecucion JS con Mozilla Rhino</td></tr>
+            <tr><td>4</td><td>ContactManagerPlugin</td><td>OS</td><td>Busqueda de contactos del telefono</td></tr>
+            <tr><td>5</td><td>DateTimePlugin</td><td>Utilidad</td><td>Fecha/hora actual</td></tr>
+            <tr><td>6</td><td>EmailComposerPlugin</td><td>Comunicacion</td><td>Redaccion y envio de emails HTML</td></tr>
+            <tr><td>7</td><td>ExportCsvPlugin</td><td>Generacion</td><td>Exportar datos a CSV/XLSX</td></tr>
+            <tr><td>8</td><td>ExportPdfPlugin</td><td>Generacion</td><td>Crear PDFs profesionales</td></tr>
+            <tr><td>9</td><td>FlashlightPlugin</td><td>OS</td><td>Control de linterna</td></tr>
+            <tr><td>10</td><td>GoogleEcosystemPlugins</td><td>Google</td><td>Gmail + Calendar + Tasks (3-en-1)</td></tr>
+            <tr><td>11</td><td>HTMLForgePlugin</td><td>Generacion</td><td>Landing pages HTML con preview</td></tr>
+            <tr><td>12</td><td>ImageGenerationPlugin</td><td>Multimedia</td><td>10 estilos artisticos via Pollinations</td></tr>
+            <tr><td>13</td><td>MemoryPlugin</td><td>IA</td><td>Busqueda en memoria del agente</td></tr>
+            <tr><td>14</td><td>ReadDocumentPlugin</td><td>Ingestion</td><td>PDF, Excel, CSV, Word reader</td></tr>
+            <tr><td>15</td><td>SystemGodModePlugin</td><td>OS</td><td>WiFi, estado termico, sistema</td></tr>
+            <tr><td>16</td><td>TelemetryQueryPlugin</td><td>Telemetria</td><td>Consulta sensores del dispositivo</td></tr>
+            <tr><td>17</td><td>VolumePlugin</td><td>OS</td><td>Control de volumen</td></tr>
+            <tr><td>18</td><td>WebApiFetcherPlugin</td><td>Red</td><td>Llamadas GET/POST a APIs externas</td></tr>
+            <tr><td>19</td><td>WebScraperPlugin</td><td>Red</td><td>Scraping de contenido web limpio</td></tr>
+            <tr><td>20</td><td>WebSearchPlugin</td><td>Busqueda</td><td>Busqueda web</td></tr>
+            <tr><td>21</td><td>WhatsAppAutomatorPlugin</td><td>Comunicacion</td><td>Envio automatico por WhatsApp</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== INPUTS ====== -->
+  <section class="doc-section" id="inputs" style="padding: 0 0 2rem; background: var(--bg-alt); padding-top:3rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">5. Que Lee (Ingestores)</h2>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead><tr><th>Formato</th><th>Modulo</th><th>Descripcion</th></tr></thead>
+          <tbody>
+            <tr><td>Imagenes (JPG/PNG)</td><td>AnalyzeImagePlugin + ML Kit OCR</td><td>Lee texto (OCR) + Vision Model describe el contenido</td></tr>
+            <tr><td>PDF</td><td>ReadDocumentPlugin + PDFBox</td><td>Extrae texto, tablas y parrafos</td></tr>
+            <tr><td>Excel / XLSX</td><td>ReadDocumentPlugin + Apache POI</td><td>Lee hojas, filas, busca registros</td></tr>
+            <tr><td>CSV</td><td>ReadDocumentPlugin</td><td>Parseo estructurado de tablas</td></tr>
+            <tr><td>Word / DOCX</td><td>ReadDocumentPlugin + Apache POI</td><td>Lectura de documentos Office</td></tr>
+            <tr><td>HTML / Paginas Web</td><td>WebScraperPlugin + Jsoup</td><td>Extrae contenido limpio (sin CSS/JS)</td></tr>
+            <tr><td>Audio (VoiceNotes)</td><td>Deepgram STT (Nova-2)</td><td>Transcribe audio en ultra baja latencia</td></tr>
+            <tr><td>Camera Live Stream</td><td>CameraX + Vision Engine</td><td>Analisis visual continuo frame-by-frame</td></tr>
+            <tr><td>Archivos adjuntos</td><td>AttachmentManager</td><td>Deteccion MIME, preview, enrutamiento</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== OUTPUTS ====== -->
+  <section class="doc-section" id="outputs" style="padding: 3rem 0;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">6. Que Produce (Generadores)</h2>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead><tr><th>Formato</th><th>Modulo</th><th>Descripcion</th></tr></thead>
+          <tbody>
+            <tr><td>PDF</td><td>ExportPdfPlugin + PDFBox</td><td>PDFs con margenes, colores, membrete desde Markdown</td></tr>
+            <tr><td>Excel / CSV</td><td>ExportCsvPlugin</td><td>Datos tabulados en .csv / .xlsx</td></tr>
+            <tr><td>HTML Landing Pages</td><td>HTMLForgePlugin</td><td>HTML/CSS + visualizador WebView integrado</td></tr>
+            <tr><td>HTML Email</td><td>EmailComposerPlugin</td><td>Correos con tablas HTML incrustadas</td></tr>
+            <tr><td>Eventos (.ics)</td><td>CalendarOperatorPlugin</td><td>Archivos de invitacion de calendario</td></tr>
+            <tr><td>Imagenes generadas</td><td>ImageGenerationPlugin</td><td>10 estilos artisticos via Pollinations.ai</td></tr>
+            <tr><td>Graficos (Charts)</td><td>Visual Chart Generator</td><td>Graficos de barras/pastel basados en datos</td></tr>
+            <tr><td>Codigo ejecutado</td><td>CodeSandboxPlugin + Rhino</td><td>Ejecuta JavaScript y devuelve output al chat</td></tr>
+            <tr><td>API Responses</td><td>WebApiFetcherPlugin</td><td>Llamadas GET/POST a APIs externas</td></tr>
+            <tr><td>Archivos descargables</td><td>PublicFileWriter + MediaStore</td><td>Guardados en Downloads/EMMA/</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== VOICE ====== -->
+  <section class="doc-section" id="voice" style="padding: 0 0 2rem; background: var(--bg-alt); padding-top:3rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">7. Voz e Idiomas</h2>
+      <div class="doc-grid">
+        <div class="doc-card">
+          <h3>Motores de Voz</h3>
+          <ul>
+            <li><strong>Deepgram Nova-2</strong> — STT ultra baja latencia</li>
+            <li><strong>Deepgram Aura</strong> — TTS premium (ingles)</li>
+            <li><strong>ElevenLabs</strong> — Voice cloning multilingue</li>
+            <li><strong>Android TTS nativo</strong> — Fallback gratuito del sistema</li>
+          </ul>
+          <p style="font-size:0.85rem; color:var(--muted);">Cadena de fallback: ElevenLabs &rarr; Deepgram &rarr; Android TTS</p>
+        </div>
+        <div class="doc-card">
+          <h3>Idiomas</h3>
+          <ul>
+            <li><strong>Espanol</strong> — UI + Voz + Chat (idioma primario)</li>
+            <li><strong>Ingles</strong> — UI + Voz + Chat</li>
+            <li><strong>Otros</strong> — Adaptivo via Locale.getDefault()</li>
+          </ul>
+          <p style="font-size:0.85rem; color:var(--muted);">Dual XML (i18n): strings.xml en espanol e ingles con traduccion adaptiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CHANNELS ====== -->
+  <section class="doc-section" id="channels" style="padding: 3rem 0 2rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">8. Canales de Comunicacion</h2>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead><tr><th>Canal</th><th>Modulo</th><th>Modo</th></tr></thead>
+          <tbody>
+            <tr><td>Chat Nativo</td><td>ChatScreen.kt</td><td>Burbujas, adjuntos, multimedia, voicenotes</td></tr>
+            <tr><td>Telegram</td><td>TelegramBotService.kt</td><td>Foreground service, long-polling, routing a EmmaEngine</td></tr>
+            <tr><td>Email (SMTP/IMAP)</td><td>EmailService.kt + JavaMail</td><td>Envio/recepcion directa sin app externa</td></tr>
+            <tr><td>WhatsApp</td><td>WhatsAppAutomatorPlugin.kt</td><td>Automatizacion via Accessibility Service</td></tr>
+            <tr><td>Web Browser</td><td>BrowserChatPanel</td><td>WebView embebido (75% pantalla)</td></tr>
+            <tr><td>Hermes Tunnel</td><td>HermesTunnelClient.kt</td><td>WebSocket persistente con servidor maestro</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GOOGLE ====== -->
+  <section class="doc-section" id="google" style="padding: 0 0 2rem; background: var(--bg-alt); padding-top:3rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">9. Google Workspace</h2>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead><tr><th>Servicio</th><th>Modulo</th><th>Capacidades</th></tr></thead>
+          <tbody>
+            <tr><td>Gmail</td><td>GoogleGmailService.kt</td><td>Inbox, Send, Search</td></tr>
+            <tr><td>Calendar</td><td>GoogleCalendarService.kt</td><td>List, Create, Delete events</td></tr>
+            <tr><td>Tasks</td><td>GoogleTasksService.kt</td><td>List, Create, Complete tasks</td></tr>
+            <tr><td>Drive</td><td>GoogleDriveService.kt</td><td>Browse, Upload, Download</td></tr>
+            <tr><td>Auth</td><td>GoogleAuthManager.kt</td><td>OAuth2 Credential Manager + Sign-In</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GOD MODE ====== -->
+  <section class="doc-section" id="godmode" style="padding: 3rem 0 2rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">10. God Mode y Telemetria</h2>
+      <div class="doc-grid">
+        <div class="doc-card">
+          <h3>Scanner Ambiental</h3>
+          <ul>
+            <li><strong>Sensor de Luz</strong> — Nivel lux ambiental</li>
+            <li><strong>Sensor Magnetico</strong> — Campo magnetico</li>
+            <li><strong>Proximidad</strong> — Deteccion de cercania</li>
+            <li><strong>Bateria</strong> — Nivel + Estado de carga</li>
+            <li><strong>Termico</strong> — Estado de sobrecalentamiento</li>
+            <li><strong>Red/WiFi</strong> — Intensidad senal en tiempo real</li>
+            <li><strong>GPS Real</strong> — Coordenadas autenticas</li>
+            <li><strong>Clima</strong> — Datos en vivo via Open-Meteo</li>
+          </ul>
+        </div>
+        <div class="doc-card">
+          <h3>Acciones OS (God Mode)</h3>
+          <ul>
+            <li><strong>FlashlightPlugin</strong> — Linterna</li>
+            <li><strong>VolumePlugin</strong> — Control de volumen</li>
+            <li><strong>ContactManagerPlugin</strong> — Contactos</li>
+            <li><strong>CalendarOperatorPlugin</strong> — Calendario OS</li>
+            <li><strong>AlarmClock Intent</strong> — Alarmas / Timers</li>
+            <li><strong>SystemGodModePlugin</strong> — WiFi / Estado sistema</li>
+            <li><strong>TelemetryQueryPlugin</strong> — Consulta sensores</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== BUILD ====== -->
+  <section class="doc-section" id="build" style="padding: 0 0 3rem; background: var(--bg-alt); padding-top:3rem;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">11. Build y Distribucion</h2>
+      <div class="doc-card">
+        <div class="comparison-wrapper">
+          <table class="comparison-table">
+            <thead><tr><th>Campo</th><th>Valor</th></tr></thead>
+            <tbody>
+              <tr><td>Plataforma</td><td>Android nativo</td></tr>
+              <tr><td>Lenguaje</td><td>Kotlin</td></tr>
+              <tr><td>UI Framework</td><td>Jetpack Compose + Material 3</td></tr>
+              <tr><td>Min SDK</td><td>26 (Android 8.0)</td></tr>
+              <tr><td>Target SDK</td><td>35 (Android 15)</td></tr>
+              <tr><td>Java Target</td><td>JVM 17</td></tr>
+              <tr><td>Compose Compiler</td><td>1.5.8</td></tr>
+              <tr><td>Build System</td><td>Gradle KTS + KSP</td></tr>
+              <tr><td>Version</td><td>v6.0.0 (code 4)</td></tr>
+              <tr><td>Minificacion</td><td>R8/ProGuard habilitado (release)</td></tr>
+              <tr><td>Shrink Resources</td><td>Si</td></tr>
+              <tr><td>Signing</td><td>Keystore JKS (emma-release.jks)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; padding-top:0;">
+        <p>2026 LumenAI. Distribuido bajo Licencia MIT.</p>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="index.html" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">Inicio</a>
+          <a href="docs.html" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">Docs</a>
+          <a href="licenses.html" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">Licencias</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
