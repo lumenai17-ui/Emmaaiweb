@@ -1030,3 +1030,29 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
   .social-proof-inner { gap: 1.5rem; }
   .proof-dot { display: none; }
 }
+
+/* ==========================================
+   LANGUAGE TOGGLE
+   ========================================== */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg);
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  color: var(--navy) !important;
+  letter-spacing: 0.04em;
+  transition: all var(--duration-fast) var(--ease);
+  border: 1px solid var(--border);
+}
+
+.lang-toggle:hover {
+  background: var(--navy);
+  color: white !important;
+  border-color: var(--navy);
+  transform: translateY(-1px);
+}

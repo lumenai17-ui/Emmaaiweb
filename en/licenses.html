@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licenses — HelloEmma.ai</title>
+  <meta name="description" content="E.M.M.A. AI licenses: MIT main license and all third-party dependencies.">
+  <meta name="theme-color" content="#F5F0E8">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=20260415b">
+</head>
+<body>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="../assets/logo-3d-clean.jpg" alt="E.M.M.A. AI">
+        HelloEmma.ai
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="docs.html">Docs</a>
+        <a href="licenses.html" style="color:var(--navy); font-weight:600;">Licenses</a>
+        <a href="../licenses.html" class="lang-toggle" title="Cambiar a Espanol">ES</a>
+        <a href="index.html#cta" class="nav-cta">Get Access</a>
+      </div>
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: calc(var(--nav-height) + 4rem); padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2rem;">
+        <span class="eyebrow">Legal</span>
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem);">Licenses &amp; Compliance</h1>
+        <p>E.M.M.A. AI v6.0.0 &mdash; Full transparency about the code and its dependencies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 3rem 0;">
+    <div class="container">
+      <div style="background: var(--white); border-radius: var(--radius-lg); padding: 3rem; box-shadow: var(--shadow-soft); margin-bottom: 3rem;">
+        <h2 style="font-size: 1.6rem; margin-bottom: 1.5rem;">Main License</h2>
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 0.8rem; max-width: 500px;">
+          <span style="font-weight:600; color:var(--navy);">Type</span>
+          <span style="color:var(--muted);">MIT License</span>
+          <span style="font-weight:600; color:var(--navy);">Holder</span>
+          <span style="color:var(--muted);">&copy; 2026 LumenAI</span>
+          <span style="font-weight:600; color:var(--navy);">Scope</span>
+          <span style="color:var(--muted);">All Android source code + Agent Hub design</span>
+          <span style="font-weight:600; color:var(--navy);">Version</span>
+          <span style="color:var(--muted);">v6.0.0</span>
+          <span style="font-weight:600; color:var(--navy);">Package</span>
+          <span style="font-family:var(--font-mono); font-size:0.88rem; color:var(--muted);">com.beemovil.emma</span>
+        </div>
+
+        <div style="margin-top:2rem; background:var(--bg); border-radius:var(--radius-md); padding:1.5rem; font-family:var(--font-mono); font-size:0.78rem; color:var(--muted); line-height:1.8; max-height:300px; overflow-y:auto;">
+          <p style="font-size:0.78rem;">MIT License</p><br>
+          <p style="font-size:0.78rem;">Copyright (c) 2026 LumenAI</p><br>
+          <p style="font-size:0.78rem;">Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p><br>
+          <p style="font-size:0.78rem;">The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p><br>
+          <p style="font-size:0.78rem;">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.6rem; margin-bottom: 1.5rem;">Third-Party Dependencies</h2>
+      <p style="margin-bottom:2rem;">E.M.M.A. uses the following libraries and services, each with its own license.</p>
+
+      <h3 style="font-size:1.1rem; margin-bottom:1rem; color:var(--green-dark);">Core Android &amp; Language</h3>
+      <div class="comparison-wrapper" style="margin-bottom:2rem;">
+        <table class="comparison-table">
+          <thead><tr><th>Component</th><th>License</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Kotlin / Coroutines 1.10.x</td><td>Apache 2.0</td><td>Free for commercial use</td></tr>
+            <tr><td>Android SDK / Jetpack Compose</td><td>Apache 2.0</td><td>Free for commercial use</td></tr>
+            <tr><td>Room Database (Google)</td><td>Apache 2.0</td><td>Relational database</td></tr>
+            <tr><td>Lottie Compose (Airbnb)</td><td>Apache 2.0</td><td>AAA animations</td></tr>
+            <tr><td>Coil Compose</td><td>Apache 2.0</td><td>Image loading</td></tr>
+            <tr><td>Markwon</td><td>Apache 2.0</td><td>Markdown rendering</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:1.1rem; margin-bottom:1rem; color:var(--green-dark);">Artificial Intelligence &amp; Machine Learning</h3>
+      <div class="comparison-wrapper" style="margin-bottom:2rem;">
+        <table class="comparison-table">
+          <thead><tr><th>Component</th><th>License</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Koog Framework (ai.koog)</td><td>Apache 2.0 / MIT</td><td>KMP agent framework</td></tr>
+            <tr><td>LiteRT (ex-TF Lite, Google)</td><td>Apache 2.0</td><td>On-device inference engine</td></tr>
+            <tr><td>Gemma 4 (Google DeepMind)</td><td>Gemma Terms of Use</td><td>On-device local model</td></tr>
+            <tr><td>Llama 3 (Meta)</td><td>Meta Llama 3 License</td><td>Free &lt; 700M uses, credit required</td></tr>
+            <tr><td>Qwen / Mistral / DeepSeek</td><td>MIT / Apache 2.0</td><td>Open-weights models</td></tr>
+            <tr><td>ML Kit (Google)</td><td>Google proprietary (free)</td><td>OCR + Face Detection</td></tr>
+            <tr><td>Ollama Engine</td><td>MIT</td><td>E.M.M.A. connects as client</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:1.1rem; margin-bottom:1rem; color:var(--green-dark);">Networking &amp; Connectivity</h3>
+      <div class="comparison-wrapper" style="margin-bottom:2rem;">
+        <table class="comparison-table">
+          <thead><tr><th>Component</th><th>License</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>OkHttp3 (Square)</td><td>Apache 2.0</td><td>HTTP connector</td></tr>
+            <tr><td>Retrofit (Square)</td><td>Apache 2.0</td><td>REST client</td></tr>
+            <tr><td>Jsoup</td><td>MIT</td><td>HTML parser</td></tr>
+            <tr><td>JavaMail (Sun/Oracle)</td><td>CDDL / GPLv2</td><td>IMAP/SMTP for email</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:1.1rem; margin-bottom:1rem; color:var(--green-dark);">Document Processing</h3>
+      <div class="comparison-wrapper" style="margin-bottom:2rem;">
+        <table class="comparison-table">
+          <thead><tr><th>Component</th><th>License</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Apache POI</td><td>Apache 2.0</td><td>Excel/DOCX/PPTX parsing</td></tr>
+            <tr><td>PDFBox Android</td><td>Apache 2.0</td><td>PDF reading and generation</td></tr>
+            <tr><td>Mozilla Rhino</td><td>MPL 2.0</td><td>JavaScript engine for sandbox</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:1.1rem; margin-bottom:1rem; color:var(--green-dark);">Cloud Services (SaaS)</h3>
+      <div class="comparison-wrapper" style="margin-bottom:2rem;">
+        <table class="comparison-table">
+          <thead><tr><th>Service</th><th>Type</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td>OpenRouter</td><td>SaaS (Terms of Service)</td><td>Multi-provider LLM gateway</td></tr>
+            <tr><td>Deepgram</td><td>SaaS (Terms of Service)</td><td>Commercial STT/TTS voice</td></tr>
+            <tr><td>ElevenLabs</td><td>SaaS (Terms of Service)</td><td>Premium TTS voice cloning</td></tr>
+            <tr><td>Pollinations.ai</td><td>Public API</td><td>Image generation</td></tr>
+            <tr><td>Google APIs</td><td>Google ToS</td><td>Gmail, Calendar, Tasks, Drive, Maps</td></tr>
+            <tr><td>Open-Meteo</td><td>Open API</td><td>Real-time weather data</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background: var(--accent-green); border-radius: var(--radius-md); padding: 1.5rem 2rem; margin-top: 2rem;">
+        <p style="font-size:0.9rem; color:var(--navy); margin:0;">
+          All user API keys and credentials are stored with <strong>EncryptedSharedPreferences</strong> (Android Keystore). E.M.M.A. does not collect or transmit personal data. With local models (LiteRT/Ollama), all inference happens on-device.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; padding-top:0;">
+        <p>2026 LumenAI. Distributed under MIT License.</p>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="index.html" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">Home</a>
+          <a href="docs.html" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">Docs</a>
+          <a href="licenses.html" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">Licenses</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
