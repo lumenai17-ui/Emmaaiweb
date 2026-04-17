@@ -3,6 +3,43 @@
    Vanilla JS · Zero dependencies
    ============================================ */
 
+// ===== 0. AUTO LANGUAGE DETECTION =====
+// Redirects to /en/ if browser is not Spanish. Respects manual override.
+(function() {
+  var override = document.cookie.match(/lang_override=([^;]+)/);
+  if (override) return; // user manually chose, don't redirect
+
+  var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  var isSpanish = lang.startsWith('es');
+  var path = window.location.pathname;
+
+  // On root Spanish pages → redirect non-Spanish speakers to /en/
+  if (!isSpanish && !path.includes('/en/')) {
+    var page = path.split('/').pop() || 'index.html';
+    if (page === '' || page === '/') page = 'index.html';
+    var base = path.substring(0, path.lastIndexOf('/') + 1);
+    window.location.replace(base + 'en/' + page);
+    return;
+  }
+
+  // On /en/ pages → redirect Spanish speakers to root
+  if (isSpanish && path.includes('/en/')) {
+    var page = path.split('/').pop() || 'index.html';
+    var newPath = path.replace('/en/', '/');
+    window.location.replace(newPath);
+    return;
+  }
+})();
+
+// Set cookie when user clicks language toggle (persists manual choice)
+document.addEventListener('click', function(e) {
+  var toggle = e.target.closest('.lang-toggle');
+  if (toggle) {
+    var lang = toggle.textContent.trim(); // "EN" or "ES"
+    document.cookie = 'lang_override=' + lang + ';path=/;max-age=31536000';
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== 1. SCROLL REVEAL =====
