@@ -1,0 +1,13 @@
+# Render rewrite rules — serve real files instead of falling back to root index.html
+# Status 200 = rewrite (URL stays the same, content from destination)
+
+# Bare and trailing-slash variants of subdirectory index files
+/en                  /en/index.html         200
+/en/                 /en/index.html         200
+/en/index            /en/index.html         200
+
+# Pretty URLs (Render strips .html — these route the bare paths to the real files)
+/docs                /docs.html             200
+/licenses            /licenses.html         200
+/en/docs             /en/docs.html          200
+/en/licenses         /en/licenses.html      200
