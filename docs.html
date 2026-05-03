@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentacion — HelloEmma.ai</title>
-  <meta name="description" content="Documentacion tecnica y guia de inicio rapido para E.M.M.A. AI — plataforma multi-agente para Android.">
+  <title>Documentacion — HelloEmma.app</title>
+  <meta name="description" content="Documentacion tecnica y guia de inicio rapido para E.M.M.A. AI — Enhanced Multi-Modal Mobile Assistant para Android.">
   <meta name="theme-color" content="#F5F0E8">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -75,8 +75,8 @@
   <nav class="nav scrolled" id="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo-3d-clean.jpg" alt="E.M.M.A. AI">
-        HelloEmma.ai
+        <img src="assets/emma-icon.png" alt="E.M.M.A. AI">
+        HelloEmma.app
       </a>
       <div class="nav-links" id="nav-links">
         <a href="index.html#features">Capacidades</a>
@@ -84,7 +84,7 @@
         <a href="docs.html" style="color:var(--navy); font-weight:600;">Docs</a>
         <a href="licenses.html">Licencias</a>
         <a href="en/docs.html" class="lang-toggle" title="Switch to English">EN</a>
-        <a href="index.html#cta" class="nav-cta">Obtener Acceso</a>
+        <a href="index.html#cta" class="nav-cta">Descargar</a>
       </div>
       <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Abrir menu">
         <span></span><span></span><span></span>
@@ -111,7 +111,7 @@
         <a href="#quickstart">1. Inicio Rapido</a>
         <a href="#architecture">2. Arquitectura Multi-Agente</a>
         <a href="#models">3. Modelos de IA</a>
-        <a href="#plugins">4. Sistema de Plugins (21 Built-in)</a>
+        <a href="#plugins">4. Sistema de Habilidades (20+ Built-in)</a>
         <a href="#inputs">5. Que Lee (Ingestores)</a>
         <a href="#outputs">6. Que Produce (Generadores)</a>
         <a href="#voice">7. Voz e Idiomas</a>
@@ -129,14 +129,14 @@
       <h2 style="margin-bottom:1.5rem;">1. Inicio Rapido</h2>
       <div class="doc-grid">
         <div class="doc-card">
-          <h3>Acceso Anticipado (Usuarios)</h3>
+          <h3>Google Play (Usuarios)</h3>
           <p>La forma mas rapida de empezar.</p>
           <ul>
-            <li><strong>Descarga</strong> el APK desde la pagina de compra</li>
-            <li><strong>Instala</strong> habilitando "Origenes desconocidos" en Ajustes</li>
+            <li><strong>Descarga</strong> desde Google Play Store ($2.99 pago unico)</li>
             <li><strong>Abre E.M.M.A.</strong> y acepta los permisos</li>
             <li>Ve a <strong>Settings</strong> y configura tu provider de IA</li>
             <li>Abre <strong>La Forja</strong> para crear tu primer agente</li>
+            <li>Di <strong>"Hello Emma"</strong> para activar el modo manos libres</li>
           </ul>
           <p style="font-size:0.85rem; color:var(--green-dark); font-weight:500;">Tiempo estimado: 2 minutos</p>
         </div>
@@ -172,12 +172,12 @@
             </ul>
           </div>
           <div>
-            <h4 style="font-size:0.95rem; margin-bottom:0.5rem; color:var(--green-dark);">Local (Ollama)</h4>
+            <h4 style="font-size:0.95rem; margin-bottom:0.5rem; color:var(--green-dark);">Cloud Open-Source (Ollama Cloud)</h4>
             <ul>
-              <li>Instala <strong>Ollama</strong> en tu PC/servidor</li>
-              <li>Descarga un modelo: <code style="font-family:var(--font-mono); font-size:0.82rem; background:var(--bg); padding:0.15rem 0.4rem; border-radius:4px;">ollama pull gemma3</code></li>
-              <li>En E.M.M.A. &rarr; Settings &rarr; LLM Provider &rarr; Ollama</li>
-              <li>Ingresa la IP de tu servidor (ej: <code style="font-family:var(--font-mono); font-size:0.82rem; background:var(--bg); padding:0.15rem 0.4rem; border-radius:4px;">192.168.1.100:11434</code>)</li>
+              <li>Crea cuenta en <strong>ollama.com</strong></li>
+              <li>Genera una API key</li>
+              <li>En E.M.M.A. &rarr; Settings &rarr; LLM Provider &rarr; Ollama Cloud</li>
+              <li>Selecciona modelo (Llama 3.3, Qwen, Mistral, DeepSeek)</li>
             </ul>
           </div>
         </div>
@@ -258,14 +258,14 @@
           <p style="font-size:0.88rem;">Acceso via API key de OpenRouter. Compatible con cualquier modelo del catalogo.</p>
         </div>
         <div class="doc-card">
-          <h3>Local / Edge (via Ollama)</h3>
+          <h3>Cloud (via Ollama Cloud)</h3>
           <div class="doc-pill-row">
-            <span class="feature-pill">Gemma 4</span>
+            <span class="feature-pill">Llama 3.3</span>
             <span class="feature-pill">Qwen 3 MoE</span>
             <span class="feature-pill">DeepSeek R1</span>
-            <span class="feature-pill">Command R+</span>
+            <span class="feature-pill">Mistral</span>
           </div>
-          <p style="font-size:0.88rem;">Requiere servidor Ollama en red local o remoto. Modelos open-source.</p>
+          <p style="font-size:0.88rem;">Modelos open-source servidos desde Ollama Cloud. No requiere servidor propio.</p>
         </div>
         <div class="doc-card">
           <h3>On-Device (100% Offline)</h3>
@@ -286,7 +286,7 @@
   <!-- ====== PLUGINS ====== -->
   <section class="doc-section" id="plugins" style="padding: 0 0 2rem;">
     <div class="container">
-      <h2 style="margin-bottom:1.5rem;">4. Sistema de Plugins (21 Built-in)</h2>
+      <h2 style="margin-bottom:1.5rem;">4. Sistema de Habilidades (20+ Built-in)</h2>
       <div class="comparison-wrapper">
         <table class="comparison-table">
           <thead><tr><th>#</th><th>Plugin</th><th>Categoria</th><th>Descripcion</th></tr></thead>
@@ -498,7 +498,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-bottom" style="border-top:none; padding-top:0;">
-        <p>2026 LumenAI. Distribuido bajo Licencia MIT.</p>
+        <p>&copy; 2026 Bee-Movil. Distribuido bajo Licencia Apache 2.0.</p>
         <div style="display:flex; gap:1.5rem;">
           <a href="index.html" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">Inicio</a>
           <a href="docs.html" style="color:rgba(255,255,255,0.6); font-size:0.85rem;">Docs</a>

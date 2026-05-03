@@ -3,28 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HelloEmma.ai — Enhanced Mobile Multi Agent AI</title>
-  <meta name="description" content="E.M.M.A. AI transforma tu Android en un centro de comando de IA multi-agente. 21 herramientas nativas, modelos cloud y on-device, privacidad total.">
+  <title>HelloEmma.app — Enhanced Multi-Modal Mobile Assistant</title>
+  <meta name="description" content="E.M.M.A. AI transforma tu Android en un asistente de IA multi-modal con 20+ habilidades nativas, vision por camara, LifeStream contextual y privacidad total.">
   <meta name="theme-color" content="#F5F0E8">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260415">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/v2.css">
 </head>
 <body>
 
-  <!-- ====== NAVIGATION ====== -->
+  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <img src="assets/logo-3d-clean.jpg" alt="E.M.M.A. AI">
-        HelloEmma.ai
+      <a href="#hero" class="nav-logo">
+        <img src="assets/emma-icon.png" alt="E.M.M.A. AI">
+        <span>HelloEmma.app</span>
       </a>
       <div class="nav-links" id="nav-links">
         <a href="#features">Capacidades</a>
-        <a href="#screenshots">Producto</a>
+        <a href="#product">Producto</a>
         <a href="#pricing">Planes</a>
         <a href="docs.html">Docs</a>
         <a href="#faq">FAQ</a>
@@ -37,339 +36,360 @@
     </div>
   </nav>
 
-  <!-- ====== HERO ====== -->
-  <section class="hero section" id="hero">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow anim-up d1">Enhanced Multi-Modal Mobile Assistant</p>
+        <h1 class="anim-up d2">
+          <span class="hero-line">Hello,</span>
+          <span class="hero-line text-shine">Emma.</span>
+        </h1>
+        <p class="hero-sub anim-up d3">Tu asistente de IA personal que vive en tu telefono. 20+ habilidades nativas. Vision por camara. Modelos en la nube y on-device. Di <strong>"Hello Emma"</strong> y activa el modo manos libres.</p>
+        <div class="hero-ctas anim-up d4">
+          <a href="https://play.google.com/store/apps/details?id=com.beemovil.emma" class="btn btn-primary" target="_blank">Descargar en Google Play</a>
+          <a href="https://github.com/lumenai17-ui/E.M.M.A-AI" class="btn btn-ghost" target="_blank">Gratis en GitHub</a>
+        </div>
+        <p class="hero-micro anim-up d5">Sin suscripcion · Sin tracking · Sin publicidad · Tus datos son tuyos</p>
+      </div>
+      <div class="hero-visual anim-up d4">
+        <img src="assets/hero-v2.jpg" alt="E.M.M.A. AI — Plataforma multi-agente en Android" class="hero-img">
+      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof" id="social-proof">
     <div class="container">
-      <div class="hero-banner">
-        <div class="hero-content">
-          <h1>
-            <span>Hello,</span>
-            <span class="text-gradient">Emma.</span>
-          </h1>
-          <p class="hero-subtitle">
-            La primera plataforma de IA multi-agente que vive dentro
-            de tu Android. 21 herramientas nativas. Modelos en la nube
-            y en tu dispositivo. Privacidad absoluta.
-          </p>
-          <div class="hero-ctas">
-            <a href="https://gumroad.com/l/boeskf" class="btn btn-primary" target="_blank">Obtener Acceso — $2.99</a>
-            <a href="https://github.com/lumenai17-ui/E.M.M.A-AI" class="btn btn-secondary" target="_blank">Gratis en GitHub</a>
-          </div>
-          <p class="hero-micro">Sin suscripcion. Pago unico. Actualizaciones incluidas.</p>
-        </div>
-        <div class="hero-image">
-          <img src="assets/hero-dual-phone.jpg" alt="E.M.M.A. AI — Chat y Dashboard en Android">
-        </div>
+      <div class="proof-strip">
+        <div class="proof-item"><span class="proof-n" data-target="13">0</span> fases completadas</div>
+        <div class="proof-dot"></div>
+        <div class="proof-item"><span class="proof-n" data-target="20">0</span>+ habilidades nativas</div>
+        <div class="proof-dot"></div>
+        <div class="proof-item"><span class="proof-n" data-target="6">0</span> proveedores de IA</div>
+        <div class="proof-dot"></div>
+        <div class="proof-item">Licencia Apache 2.0</div>
       </div>
     </div>
   </section>
 
-  <!-- ====== HELLO EMMA — Multilingual ====== -->
-  <section class="hello-section section" id="hello">
+  <!-- STATEMENT 1 -->
+  <section class="statement">
     <div class="container">
-      <div class="reveal">
-        <h2>En cualquier idioma.<br>Desde cualquier lugar.</h2>
-        <p>E.M.M.A. habla tu lenguaje. Procesamiento multilingue nativo, voz sintetica premium y comprension contextual sin importar donde estes.</p>
-      </div>
-      <div class="hello-image-wrap reveal-scale delay-1">
-        <img src="assets/logo-3d-multilingual.jpg" alt="HelloEmma.ai — Hello en todos los idiomas">
-      </div>
+      <h2 class="reveal">No es un chatbot.<br>Es un equipo completo de agentes<br>que cabe en tu bolsillo.</h2>
     </div>
   </section>
 
-  <!-- ====== SOCIAL PROOF ====== -->
-  <section class="social-proof" id="social-proof">
-    <div class="container">
-      <div class="social-proof-inner">
-        <div class="proof-item">
-          <span class="proof-number" data-target="13">0</span>
-          <span>fases completadas</span>
-        </div>
-        <div class="proof-dot"></div>
-        <div class="proof-item">
-          <span class="proof-number" data-target="21">0</span>
-          <span>plugins nativos</span>
-        </div>
-        <div class="proof-dot"></div>
-        <div class="proof-item">
-          <span class="proof-number" data-target="6">0</span>
-          <span>proveedores de IA</span>
-        </div>
-        <div class="proof-dot"></div>
-        <div class="proof-item">
-          <span>Licencia MIT</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- FEATURES -->
+  <section class="features" id="features">
 
-  <!-- ====== FEATURE 1 — IA Multi-Modelo ====== -->
-  <section class="feature-block section" id="features">
-    <div class="container">
-      <div class="feature-block-inner">
-        <div class="feature-visual reveal-left">
-          <img src="assets/logo-3d-alt.jpg" alt="E.M.M.A. AI - Arquitectura multi-modelo">
+    <!-- Feature 1: Multi-Model -->
+    <div class="feat">
+      <div class="container feat-grid">
+        <div class="feat-visual reveal-left">
+          <img src="assets/multi-model-v2.jpg" alt="E.M.M.A. AI — Selección de modelos de IA" class="feat-img">
         </div>
-        <div class="feature-text reveal-right">
+        <div class="feat-text reveal-right">
           <span class="eyebrow">Modelos de IA</span>
-          <h2>Elige tu cerebro. O usa todos.</h2>
-          <p>Conecta al modelo que necesites: GPT-4o, Claude y Gemini en la nube. Gemma 4 y Qwen 3 via Ollama. O ejecuta inferencia ARM 100% offline directamente en tu procesador.</p>
-          <div class="feature-pills">
-            <span class="feature-pill">OpenRouter</span>
-            <span class="feature-pill">Ollama</span>
-            <span class="feature-pill">LiteRT</span>
-            <span class="feature-pill">Custom API</span>
-            <span class="feature-pill">GPT-4o</span>
-            <span class="feature-pill">Claude 3.5+</span>
-            <span class="feature-pill">Gemma 4</span>
+          <h2>Elige tu cerebro.<br>O usa todos.</h2>
+          <p>Conecta al modelo que necesites: GPT-4o, Claude y Gemini via OpenRouter. Llama, Mistral y Qwen via Ollama Cloud. O ejecuta Gemma directamente en tu dispositivo, 100% offline, sin internet.</p>
+          <div class="pills">
+            <span>OpenRouter</span><span>Ollama Cloud</span><span>LiteRT</span><span>Custom API</span><span>GPT-4o</span><span>Claude 3.5+</span><span>Gemma</span>
           </div>
-          <a href="#ai-detail" class="feature-link">Mas sobre modelos <span class="arrow">&#8594;</span></a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ====== STATEMENT ====== -->
-  <section class="statement">
-    <div class="container reveal">
-      <h2>No es un chatbot.<br>Es un equipo completo de agentes especializados<br>que cabe en tu bolsillo.</h2>
-    </div>
-  </section>
-
-  <!-- ====== FEATURE 2 — Multi-Agente (reversed) ====== -->
-  <section class="feature-block reversed" style="background: var(--bg-alt);">
-    <div class="container">
-      <div class="feature-block-inner">
-        <div class="feature-visual reveal-right">
-          <img src="assets/screenshots-4panel.jpg" alt="E.M.M.A. AI - Dashboard, Chat, Settings, Perfil">
+    <!-- Feature 2: Multi-Agent -->
+    <div class="feat feat-alt">
+      <div class="container feat-grid feat-reversed">
+        <div class="feat-visual reveal-right">
+          <div class="agent-visual">
+            <div class="agent-flow">
+              <div class="agent-node agent-main">La Forja</div>
+              <div class="agent-lines"><span></span><span></span><span></span></div>
+              <div class="agent-row">
+                <div class="agent-node agent-sub">Investigador</div>
+                <div class="agent-node agent-sub">Redactor</div>
+                <div class="agent-node agent-sub">Ejecutor</div>
+              </div>
+              <div class="agent-protocol">Protocolo A2A · Koog Engine</div>
+            </div>
+          </div>
         </div>
-        <div class="feature-text reveal-left">
+        <div class="feat-text reveal-left">
           <span class="eyebrow">Sistema multi-agente</span>
-          <h2>Una orden. Varios expertos.</h2>
+          <h2>Una orden.<br>Varios expertos.</h2>
           <p>Varios agentes especializados colaboran bajo el protocolo Koog Engine (A2A). Uno investiga, otro redacta, otro ejecuta. Tu solo das la orden desde La Forja.</p>
-          <div class="feature-pills">
-            <span class="feature-pill">Agent Hub</span>
-            <span class="feature-pill">La Forja</span>
-            <span class="feature-pill">Protocolo A2A</span>
-            <span class="feature-pill">Koog Engine</span>
+          <div class="pills">
+            <span>Agent Hub</span><span>La Forja</span><span>Protocolo A2A</span><span>Koog Engine</span>
           </div>
-          <a href="#" class="feature-link">Explorar agentes <span class="arrow">&#8594;</span></a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ====== FEATURE 3 — God Mode (dark) ====== -->
-  <section class="feature-block dark" id="god-mode">
-    <div class="container">
-      <div class="feature-block-inner">
-        <div class="feature-visual reveal-left">
-          <img src="assets/hero-dual-phone.jpg" alt="E.M.M.A. AI - Control total del dispositivo">
+    <!-- Feature 3: God Mode -->
+    <div class="feat feat-dark">
+      <div class="container feat-grid">
+        <div class="feat-visual reveal-left">
+          <div class="god-visual">
+            <div class="god-grid">
+              <div class="god-chip on">Linterna</div>
+              <div class="god-chip">WiFi</div>
+              <div class="god-chip on">Volumen</div>
+              <div class="god-chip">Alarmas</div>
+              <div class="god-chip">Contactos</div>
+              <div class="god-chip on">Calendario</div>
+              <div class="god-chip">GPS</div>
+              <div class="god-chip">Clima</div>
+              <div class="god-chip">SMS</div>
+              <div class="god-chip on">Camara</div>
+              <div class="god-chip">Bluetooth</div>
+              <div class="god-chip last">+10</div>
+            </div>
+          </div>
         </div>
-        <div class="feature-text reveal-right">
+        <div class="feat-text reveal-right">
           <span class="eyebrow">God Mode</span>
-          <h2>Tu voz controla el telefono entero.</h2>
-          <p>Linterna, volumen, WiFi, alarmas, contactos, calendario, navegacion y clima. No necesitas abrir otra app. E.M.M.A. habla directamente con Android a traves de 21 plugins nativos.</p>
-          <div class="feature-pills">
-            <span class="feature-pill">Linterna</span>
-            <span class="feature-pill">WiFi</span>
-            <span class="feature-pill">Volumen</span>
-            <span class="feature-pill">Alarmas</span>
-            <span class="feature-pill">Contactos</span>
-            <span class="feature-pill">Calendario</span>
-            <span class="feature-pill">GPS</span>
-            <span class="feature-pill">Clima</span>
+          <h2>Tu voz controla<br>el telefono entero.</h2>
+          <p>Linterna, volumen, WiFi, alarmas, contactos, calendario, navegacion y clima. No necesitas abrir otra app. E.M.M.A. habla directamente con Android a traves de 20+ habilidades nativas.</p>
+          <div class="pills pills-dark">
+            <span>Linterna</span><span>WiFi</span><span>Volumen</span><span>Alarmas</span><span>Contactos</span><span>Calendario</span><span>GPS</span><span>Clima</span>
           </div>
-          <a href="#" class="feature-link">Ver todos los plugins <span class="arrow">&#8594;</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- Feature 4: Vision -->
+    <div class="feat feat-alt">
+      <div class="container feat-grid feat-reversed">
+        <div class="feat-visual reveal-right">
+          <div class="vision-visual">
+            <div class="vision-ring"></div>
+            <div class="vision-center">
+              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="vision-labels">
+              <span class="vl vl-1">Face Detection</span>
+              <span class="vl vl-2">OCR</span>
+              <span class="vl vl-3">Barcode</span>
+              <span class="vl vl-4">Live Analysis</span>
+            </div>
+          </div>
+        </div>
+        <div class="feat-text reveal-left">
+          <span class="eyebrow">Vision</span>
+          <h2>Tu camara<br>es otro sentido.</h2>
+          <p>Analisis en tiempo real con narracion IA. Deteccion de rostros, OCR, escaneo de codigos con ML Kit. Pocket Mode: analisis en segundo plano con la camara apagada.</p>
+          <div class="pills">
+            <span>CameraX</span><span>ML Kit</span><span>Live Vision</span><span>OCR</span><span>Pocket Mode</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 5: LifeStream -->
+    <div class="feat">
+      <div class="container feat-grid">
+        <div class="feat-visual reveal-left">
+          <div class="life-visual">
+            <div class="life-stream">
+              <div class="life-signal s1"><span class="ls-dot"></span>GPS · El Pajanal</div>
+              <div class="life-signal s2"><span class="ls-dot"></span>WiFi activo · 56% bateria</div>
+              <div class="life-signal s3"><span class="ls-dot"></span>Clima 24°C · Nublado</div>
+              <div class="life-signal s4"><span class="ls-dot"></span>Calendario · Reunion 3pm</div>
+              <div class="life-signal s5"><span class="ls-dot"></span>Tourist Safety · Activo</div>
+            </div>
+          </div>
+        </div>
+        <div class="feat-text reveal-right">
+          <span class="eyebrow">LifeStream</span>
+          <h2>Ella sabe<br>como va tu dia.</h2>
+          <p>Inteligencia contextual que entiende tu entorno. Cross-Context Engine para respuestas personalizadas. Perfiles de lugares con GPS. Tourist Safety Protocol con SMS de emergencia y ubicacion.</p>
+          <div class="pills">
+            <span>LifeStream</span><span>Cross-Context</span><span>GPS Profiles</span><span>Tourist Safety</span><span>291 strings</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== STATEMENT 2 ====== -->
+  <!-- STATEMENT 2 -->
   <section class="statement">
-    <div class="container reveal">
-      <h2>No solo responde.<br><span class="text-gradient">Entrega.</span></h2>
-      <p>PDFs profesionales, hojas de calculo, landing pages HTML, emails con tablas, eventos .ICS, imagenes con 10 estilos artisticos, graficos y codigo ejecutable.</p>
+    <div class="container">
+      <h2 class="reveal">No solo responde.<br><span class="text-shine">Entrega.</span></h2>
+      <p class="reveal statement-sub">PDFs profesionales, hojas de calculo, landing pages HTML, emails con tablas, eventos .ICS, imagenes con 10 estilos artisticos, graficos y codigo ejecutable.</p>
     </div>
   </section>
 
-  <!-- ====== SCREENSHOTS 4-PANEL ====== -->
-  <section class="screenshots-section section" id="screenshots">
+  <!-- PRODUCT SCREENSHOTS -->
+  <section class="product" id="product">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Producto</span>
-        <h2>Disenada para que la uses, no para que la configures.</h2>
+        <h2>Disenada para que la uses,<br>no para que la configures.</h2>
       </div>
-      <div class="screenshots-image reveal-scale">
-        <img src="assets/screenshots-4panel.jpg" alt="E.M.M.A. AI - Vistas del producto: Dashboard, Chat, Settings, Perfil">
+      <div class="product-visual reveal-scale">
+        <img src="assets/product-4panel-v2.jpg" alt="E.M.M.A. AI — Dashboard, Chat, Settings, Perfil" class="product-img">
       </div>
     </div>
   </section>
 
-  <!-- ====== CHANNELS ====== -->
-  <section class="section" id="channels" style="background: var(--bg-alt);">
+  <!-- CHANNELS -->
+  <section class="channels" id="channels">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Canales</span>
         <h2>Ella va donde tu estas.</h2>
         <p>E.M.M.A. no vive atrapada en una sola app. Se conecta a tus canales reales.</p>
       </div>
-      <div class="channels-list">
-        <div class="channel-item reveal delay-1">
-          <div class="channel-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
+      <div class="channel-grid">
+        <div class="channel-card reveal d1">
+          <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
           <h4>Chat Nativo</h4>
-          <p>Burbujas, adjuntos, multimedia y voicenotes. La experiencia principal.</p>
+          <p>Burbujas, adjuntos, multimedia y voicenotes.</p>
         </div>
-        <div class="channel-item reveal delay-1">
-          <div class="channel-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>
-          </div>
+        <div class="channel-card reveal d2">
+          <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></div>
           <h4>Telegram Bot</h4>
-          <p>Foreground service 24/7 con long-polling. Responde desde Telegram.</p>
+          <p>Foreground service 24/7 con long-polling.</p>
         </div>
-        <div class="channel-item reveal delay-2">
-          <div class="channel-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
+        <div class="channel-card reveal d1">
+          <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
           <h4>Email Directo</h4>
-          <p>IMAP + SMTP integrado. Lee tu inbox, redacta, envia y busca.</p>
+          <p>IMAP + SMTP integrado. Lee, redacta, envia.</p>
         </div>
-        <div class="channel-item reveal delay-2">
-          <div class="channel-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          </div>
+        <div class="channel-card reveal d2">
+          <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
           <h4>WhatsApp</h4>
-          <p>Automatizacion via Accessibility Service o Android Intents.</p>
+          <p>Automatizacion via Accessibility Service.</p>
         </div>
-        <div class="channel-item reveal delay-3">
-          <div class="channel-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
+        <div class="channel-card reveal d1">
+          <div class="ch-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
           <h4>Browser in Chat</h4>
-          <p>WebView embebido. Navega sin desconectarte del chat.</p>
+          <p>WebView embebido dentro del chat.</p>
         </div>
-        <div class="channel-item reveal delay-3">
-          <div class="channel-icon">
-            <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-          </div>
+        <div class="channel-card reveal d2">
+          <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
           <h4>Hermes Tunnel</h4>
-          <p>WebSocket persistente. Comunicacion bidireccional con Wake Lock.</p>
+          <p>WebSocket persistente bidireccional.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== COMPARISON TABLE ====== -->
-  <section class="section" id="pricing">
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Planes</span>
-        <h2>El poder es tuyo. Tu eliges cuanto.</h2>
+        <h2>El poder es tuyo.<br>Tu eliges cuanto.</h2>
       </div>
-      <div class="comparison-wrapper reveal-scale">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Caracteristica</th>
-              <th>GitHub (Codigo Fuente)</th>
-              <th>Acceso Anticipado ($2.99)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Distribucion</td><td>Codigo fuente — compilas tu propio APK</td><td><span class="check">APK listo para instalar</span></td></tr>
-            <tr><td>Ideal para</td><td>Desarrolladores y contribuidores</td><td><span class="check">Usuarios finales</span></td></tr>
-            <tr><td>Agentes</td><td>1 agente basico</td><td><span class="check">Ilimitados</span></td></tr>
-            <tr><td>Mensajes</td><td>50/dia</td><td><span class="check">Sin limite</span></td></tr>
-            <tr><td>Modelos On-Device</td><td>Gemma 4 (basico)</td><td><span class="check">Completo + Ollama</span></td></tr>
-            <tr><td>Modelos Cloud</td><td>Acceso limitado</td><td><span class="check">OpenRouter completo</span></td></tr>
-            <tr><td>God Mode</td><td>Funciones basicas</td><td><span class="check">Control total</span></td></tr>
-            <tr><td>Exportacion</td><td><span class="cross">—</span></td><td><span class="check">PDF, CSV, HTML, imagenes</span></td></tr>
-            <tr><td>Google Workspace</td><td><span class="cross">—</span></td><td><span class="check">Gmail + Calendar + Tasks + Drive</span></td></tr>
-            <tr><td>Telegram Bot</td><td><span class="cross">—</span></td><td><span class="check">Foreground Service 24/7</span></td></tr>
-            <tr><td>Voz Premium</td><td><span class="cross">—</span></td><td><span class="check">ElevenLabs voice cloning</span></td></tr>
-            <tr><td>Soporte</td><td>Comunidad GitHub</td><td><span class="check">Prioritario</span></td></tr>
-            <tr><td>Publicidad</td><td>Ninguna</td><td>Ninguna</td></tr>
-          </tbody>
-        </table>
+      <div class="pricing-cards reveal-scale">
+        <div class="price-card">
+          <div class="price-badge">Gratis</div>
+          <h3>GitHub</h3>
+          <p class="price-desc">Codigo fuente — compilas tu propio APK</p>
+          <ul>
+            <li>1 agente basico</li>
+            <li>50 mensajes/dia</li>
+            <li>Gemma 4 basico</li>
+            <li>God Mode basico</li>
+            <li>Comunidad GitHub</li>
+          </ul>
+          <a href="https://github.com/lumenai17-ui/E.M.M.A-AI" class="btn btn-ghost" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="price-card price-featured">
+          <div class="price-badge">$2.99 · Una vez</div>
+          <h3>Google Play</h3>
+          <p class="price-desc">Listo para instalar</p>
+          <ul>
+            <li class="hl">Agentes ilimitados</li>
+            <li class="hl">Mensajes sin limite</li>
+            <li class="hl">Completo + Ollama Cloud</li>
+            <li class="hl">God Mode total</li>
+            <li class="hl">Vision con camara + ML Kit</li>
+            <li class="hl">LifeStream contextual</li>
+            <li class="hl">Gmail + Calendar + Drive</li>
+            <li class="hl">Telegram Bot 24/7</li>
+            <li class="hl">ElevenLabs voice cloning</li>
+            <li class="hl">Soporte prioritario</li>
+          </ul>
+          <a href="https://play.google.com/store/apps/details?id=com.beemovil.emma" class="btn btn-primary" target="_blank">Obtener Acceso — $2.99</a>
+        </div>
       </div>
-      <p style="text-align:center; margin-top:1.5rem; font-size:0.85rem; color:var(--muted);">
-        Ambas versiones sin suscripcion. La version GitHub es codigo fuente bajo licencia MIT para desarrolladores que deseen compilar, auditar o contribuir. El Acceso Anticipado incluye el APK pre-compilado listo para instalar.
-      </p>
+      <p class="pricing-note reveal">Ambas versiones sin suscripcion. Licencia Apache 2.0.</p>
     </div>
   </section>
 
-  <!-- ====== HOW IT WORKS ====== -->
-  <section class="section" id="how" style="background: var(--bg-alt);">
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Como funciona</span>
-        <h2>De la descarga al primer agente: 2 minutos.</h2>
+        <h2>De la descarga al primer agente:<br>2 minutos.</h2>
       </div>
-      <div class="steps-grid">
-        <div class="step-card reveal delay-1">
-          <div class="step-number">1</div>
+      <div class="steps">
+        <div class="step reveal d1">
+          <div class="step-n" style="--c: var(--blue)">1</div>
           <h3>Descarga</h3>
-          <p>Desde GitHub (gratis) o compra el Acceso Anticipado por $2.99. Instala el APK.</p>
+          <p>Desde Google Play o compra el Acceso Anticipado. Instala y listo.</p>
         </div>
-        <div class="step-card reveal delay-2">
-          <div class="step-number">2</div>
+        <div class="step-connector reveal"></div>
+        <div class="step reveal d2">
+          <div class="step-n" style="--c: var(--green)">2</div>
           <h3>Configura</h3>
-          <p>Elige tu provider de IA: Cloud, Ollama o Local. Conecta tus APIs. 30 segundos.</p>
+          <p>Elige tu provider de IA: OpenRouter, Ollama Cloud o Gemma on-device. 30 segundos.</p>
         </div>
-        <div class="step-card reveal delay-3">
-          <div class="step-number">3</div>
+        <div class="step-connector reveal"></div>
+        <div class="step reveal d3">
+          <div class="step-n" style="--c: var(--gold)">3</div>
           <h3>Lanza</h3>
-          <p>Abre La Forja. Dale nombre, prompt y cerebro a tu primer agente. Haz la pregunta.</p>
+          <p>Abre La Forja. Dale nombre, prompt y cerebro a tu primer agente.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== TESTIMONIALS ====== -->
-  <section class="section" id="testimonials">
+  <!-- TESTIMONIALS -->
+  <section class="testi" id="testimonials">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Comunidad</span>
         <h2>Lo que dicen quienes ya la tienen.</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal delay-1">
+      <div class="testi-grid">
+        <div class="testi-card reveal d1">
           <blockquote>"Deje de usar 4 apps separadas. E.M.M.A. hace todo eso y mas, y lo hace offline."</blockquote>
-          <div class="author">— Beta tester, Ciudad de Panama</div>
+          <cite>— Beta tester, Ciudad de Panama</cite>
         </div>
-        <div class="testimonial-card reveal delay-2">
+        <div class="testi-card reveal d2">
           <blockquote>"Pense que era otro chatbot. Llevo 3 semanas y ahora mi telefono es literalmente mi oficina portatil."</blockquote>
-          <div class="author">— Usuario de acceso anticipado</div>
+          <cite>— Usuario de acceso anticipado</cite>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== FINAL CTA ====== -->
-  <section class="final-cta section" id="cta">
-    <div class="container" style="position:relative; z-index:2;">
-      <div class="final-cta-logo reveal">
-        <img src="assets/logo-3d-clean.jpg" alt="E.M.M.A. AI Logo">
-      </div>
-      <div class="section-header reveal">
-        <span class="eyebrow">Acceso Anticipado</span>
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="cta">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <img src="assets/emma-icon.png" class="cta-logo" alt="E.M.M.A. AI">
+        <span class="eyebrow">Google Play</span>
         <h2>$2.99. Una vez. Para siempre.</h2>
-        <p>Agentes ilimitados. God Mode completo. Google Workspace integrado. ElevenLabs voice cloning. Telegram Bot 24/7. Sin suscripcion. Sin publicidad.</p>
-      </div>
-      <div style="text-align:center;" class="reveal delay-2">
-        <a href="https://gumroad.com/l/boeskf" class="btn btn-primary" target="_blank">Comprar Acceso Anticipado — $2.99</a>
-        <br><br>
-        <a href="https://github.com/lumenai17-ui/E.M.M.A-AI" class="btn btn-secondary" style="border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.8); background:transparent;" target="_blank">Explorar en GitHub</a>
-        <p class="cta-micro">Licencia MIT. Codigo abierto. Auditable. Actualizable.</p>
+        <p>Agentes ilimitados. God Mode completo. Vision con camara. LifeStream contextual. Google Workspace. Telegram Bot 24/7. Sin suscripcion. Sin publicidad.</p>
+        <div class="cta-btns">
+          <a href="https://play.google.com/store/apps/details?id=com.beemovil.emma" class="btn btn-primary btn-lg" target="_blank">Descargar en Google Play — $2.99</a>
+          <a href="https://github.com/lumenai17-ui/E.M.M.A-AI" class="btn btn-ghost-light" target="_blank">Explorar en GitHub</a>
+        </div>
+        <p class="cta-micro">Apache 2.0 · Codigo abierto · Auditable · Actualizable</p>
       </div>
     </div>
   </section>
 
-  <!-- ====== FAQ ====== -->
-  <section class="section" id="faq">
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">FAQ</span>
@@ -377,81 +397,77 @@
       </div>
       <div class="faq-list">
         <div class="faq-item reveal">
-          <button class="faq-question">Que modelos de IA puedo usar?<span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Todo lo que quieras. On-device con Gemma 4 (100% offline), locales via Ollama (Qwen, DeepSeek, Command R+), o en la nube via OpenRouter (GPT-4o, Claude 3.5+, Gemini 2.5 Pro, Llama 3.3 y cientos mas). Tambien puedes conectar cualquier endpoint compatible con la API de OpenAI.</div></div>
+          <button class="faq-q" aria-expanded="false">Que modelos de IA puedo usar?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">          <p>Conecta al modelo que necesites: OpenRouter, Ollama Cloud o Gemma on-device. Tambien puedes conectar cualquier endpoint compatible con la API de OpenAI.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question">E.M.M.A. es realmente open source?<span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Si. Todo el codigo Android, el diseno del Agent Hub y la arquitectura multi-agente estan bajo licencia MIT. Puedes auditar, forkear y contribuir.</div></div>
+          <button class="faq-q" aria-expanded="false">E.M.M.A. es realmente open source?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Si. Todo el codigo Android, el diseno del Agent Hub y la arquitectura multi-agente estan bajo licencia Apache 2.0. Puedes auditar, forkear y contribuir.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question">Necesito rootear mi telefono?<span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">No. Todas las funciones de God Mode usan APIs estandar de Android y permisos de accesibilidad. Funciona en cualquier Android 8.0+ sin root.</div></div>
+          <button class="faq-q" aria-expanded="false">Necesito rootear mi telefono?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">No. Todas las funciones de God Mode usan APIs estandar de Android y permisos de accesibilidad. Funciona en cualquier Android 8.0+ sin root.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question">Puedo usar E.M.M.A. sin internet?<span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Si. Con Gemma 4 cargado en el dispositivo (formato LiteRT), puedes chatear, analizar documentos y ejecutar plugins locales sin ninguna conexion. Para modelos cloud y voz premium, necesitas internet.</div></div>
+          <button class="faq-q" aria-expanded="false">Puedo usar E.M.M.A. sin internet?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Si. Con Gemma 4 cargado en el dispositivo (formato LiteRT), puedes chatear, analizar documentos y ejecutar plugins locales sin ninguna conexion. Para modelos cloud y voz premium, necesitas internet.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question">Cual es la diferencia entre la version gratis y la de pago?<span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">La version GitHub ofrece 1 agente basico y 50 mensajes/dia. El Acceso Anticipado ($2.99, pago unico) desbloquea agentes ilimitados, mensajes ilimitados, God Mode completo, exportacion de archivos, Google Workspace, Telegram Bot, ElevenLabs y soporte prioritario.</div></div>
+          <button class="faq-q" aria-expanded="false">Cual es la diferencia entre la version gratis y la de pago?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">La version GitHub ofrece 1 agente basico y 50 mensajes/dia. El Acceso Anticipado ($2.99, pago unico) desbloquea agentes ilimitados, mensajes ilimitados, God Mode completo, exportacion de archivos, Google Workspace, Telegram Bot, ElevenLabs y soporte prioritario.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question">Hay plan de suscripcion o pagos recurrentes?<span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">No. El Acceso Anticipado es un pago unico de $2.99. Todas las actualizaciones futuras estan incluidas.</div></div>
+          <button class="faq-q" aria-expanded="false">Hay plan de suscripcion o pagos recurrentes?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">No. El Acceso Anticipado es un pago unico de $2.99. Todas las actualizaciones futuras estan incluidas.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question">Mis datos estan seguros?<span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Absolutamente. Las API keys se guardan con EncryptedSharedPreferences (Android Keystore). Con modelos locales, nada sale de tu dispositivo. La camara, el microfono y los sensores solo se activan cuando tu lo pides.</div></div>
+          <button class="faq-q" aria-expanded="false">Mis datos estan seguros?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Absolutamente. Las API keys se guardan con EncryptedSharedPreferences (Android Keystore). Con modelos locales, nada sale de tu dispositivo.</div></div>
         </div>
         <div class="faq-item reveal">
-          <button class="faq-question">Hay version para iOS?<span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Actualmente E.M.M.A. es exclusiva de Android. Una version iOS esta en evaluacion para fases futuras.</div></div>
+          <button class="faq-q" aria-expanded="false">Hay version para iOS?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Actualmente E.M.M.A. es exclusiva de Android. Una version iOS esta en evaluacion para fases futuras.</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== FOOTER ====== -->
-  <footer class="footer" id="footer">
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="container">
-      <div class="footer-inner">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-brand-logo">
-            <img src="assets/logo-3d-clean.jpg" alt="E.M.M.A. AI">
-          </div>
-          <h3>HelloEmma.ai</h3>
-          <p>Enhanced Mobile Multi Agent</p>
+          <img src="assets/emma-icon.png" alt="" class="footer-logo">
+          <h3>HelloEmma.app</h3>
+          <p>Enhanced Multi-Modal Mobile Assistant</p>
         </div>
         <div class="footer-col">
           <h4>Producto</h4>
           <a href="#features">Capacidades</a>
-          <a href="#screenshots">Producto</a>
+          <a href="#product">Producto</a>
           <a href="#pricing">Planes</a>
           <a href="#how">Como funciona</a>
         </div>
         <div class="footer-col">
           <h4>Recursos</h4>
           <a href="docs.html">Documentacion</a>
-          <a href="https://github.com/lumenai17-ui/E.M.M.A-AI" target="_blank">GitHub</a>
-          <a href="#">Changelog</a>
+          <a href="https://github.com/lumenai17-ui/E.M.M.A-AI" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/lumenai17-ui/E.M.M.A-AI/releases" target="_blank" rel="noopener">Changelog</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
-          <a href="#">Privacidad</a>
-          <a href="#">Terminos de Servicio</a>
           <a href="licenses.html">Licencias</a>
-          <a href="#">Soporte</a>
+          <a href="mailto:hb@bee-smart.ai">Soporte</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>2026 LumenAI. Distribuido bajo Licencia MIT.</p>
-        <div class="footer-tech">Kotlin · Jetpack Compose · Material 3 · Room DB · LiteRT-LM · Koog · Rhino · CameraX · ML Kit · OkHttp · Deepgram · ElevenLabs · Pollinations.ai</div>
+        <p>&copy; 2026 Bee-Movil. Distribuido bajo Licencia Apache 2.0.</p>
+        <p class="footer-tech">Kotlin · Jetpack Compose · Material 3 · Room DB · LiteRT-LM · Koog · CameraX · ML Kit · OkHttp · Deepgram · ElevenLabs</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/v2.js"></script>
 </body>
 </html>

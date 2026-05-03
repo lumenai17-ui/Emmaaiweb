@@ -85,10 +85,17 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 p { color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--blue), var(--green));
+  background: linear-gradient(135deg, var(--blue), var(--green), var(--blue-light), var(--green-dark));
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 /* --- Layout --- */
@@ -269,9 +276,9 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
   border-radius: var(--radius-xl);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 1fr;
   align-items: stretch;
-  height: 580px;
+  min-height: 560px;
 }
 
 .hero-content {
@@ -325,7 +332,7 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
 }
 
 /* ==========================================
@@ -764,7 +771,7 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
   transition: box-shadow 400ms var(--ease);
 }
 
-.faq-item.active { box-shadow: var(--shadow-soft); }
+.faq-item.faq-open { box-shadow: var(--shadow-soft); }
 
 .faq-question {
   width: 100%;
@@ -798,11 +805,11 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
   transition: transform 400ms var(--ease);
 }
 
-.faq-item.active .faq-toggle {
+.faq-item.faq-open .faq-toggle {
   background: var(--green);
 }
 
-.faq-item.active .faq-toggle svg {
+.faq-item.faq-open .faq-toggle svg {
   stroke: white;
   transform: rotate(45deg);
 }
@@ -1055,4 +1062,413 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
   color: white !important;
   border-color: var(--navy);
   transform: translateY(-1px);
+}
+
+/* ==========================================
+   AGENT VISUAL (multi-agent section placeholder)
+   ========================================== */
+.agent-visual {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(145deg, #f7f4ee 0%, #ede8df 50%, #e5e0d6 100%);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  place-items: center;
+}
+
+.agent-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 2.5rem;
+}
+
+.agent-node {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 0.6rem 1.6rem;
+  letter-spacing: 0.02em;
+}
+
+.agent-main {
+  background: var(--navy);
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem 2.2rem;
+  box-shadow: 0 6px 24px rgba(26, 43, 74, 0.25);
+  animation: float 4s ease-in-out infinite;
+}
+
+.agent-connectors {
+  display: flex;
+  gap: 3rem;
+  height: 28px;
+  align-items: stretch;
+}
+
+.agent-line {
+  width: 2px;
+  background: linear-gradient(to bottom, var(--navy), var(--green));
+  border-radius: 2px;
+  position: relative;
+}
+
+.agent-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: chip-pulse 2s ease-in-out infinite;
+}
+
+.agent-line:nth-child(2)::after { animation-delay: 0.3s; }
+.agent-line:nth-child(3)::after { animation-delay: 0.6s; }
+
+.agent-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.agent-sub {
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  transition: all var(--duration-fast) var(--ease);
+}
+
+.agent-sub:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.agent-protocol {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================
+   GOD MODE VISUAL (placeholder composition)
+   ========================================== */
+.god-visual {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  background:
+    linear-gradient(135deg, #0f1a30 0%, #1a2b4a 55%, #223e6f 100%);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  place-items: center;
+}
+
+.god-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 14px,
+      rgba(255,255,255,0.03) 14px 15px
+    );
+  pointer-events: none;
+}
+
+.god-visual::after {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(ellipse at 30% 30%, rgba(92,184,92,0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.god-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.god-chip {
+  aspect-ratio: 1;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: grid;
+  place-items: center;
+  color: rgba(255,255,255,0.65);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 0.3rem;
+  transition: all 400ms var(--ease);
+}
+
+.god-chip.active {
+  background: rgba(92,184,92,0.14);
+  border-color: rgba(122,185,122,0.45);
+  color: var(--green-light);
+  box-shadow: 0 0 0 1px rgba(122,185,122,0.25), 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.god-chip svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  margin-bottom: 4px;
+}
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-content > *,
+  .hero-image {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .feature-visual img {
+    transform: none !important;
+  }
+}
+
+/* ==========================================
+   FAQ BUTTON RESET (a11y)
+   ========================================== */
+.faq-question {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: -2px;
+  border-radius: var(--radius-md);
+}
+
+/* ==========================================
+   MICRO-INTERACTIONS & LIFE
+   ========================================== */
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.hello-image-wrap {
+  animation: float 5s ease-in-out infinite;
+}
+
+.final-cta-logo {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Feature pill hover */
+.feature-pill {
+  transition: all var(--duration-fast) var(--ease);
+  cursor: default;
+}
+
+.feature-pill:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(92, 184, 92, 0.25);
+}
+
+.feature-block.dark .feature-pill:hover {
+  background: var(--green);
+  color: white;
+}
+
+/* Channel item hover */
+.channel-item {
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-fast) var(--ease);
+}
+
+.channel-item:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.channel-item:hover .channel-icon {
+  background: var(--green);
+  transform: scale(1.1);
+}
+
+.channel-item:hover .channel-icon svg {
+  stroke: white;
+}
+
+.channel-icon {
+  transition: all var(--duration-fast) var(--ease);
+}
+
+/* Step card hover */
+.step-card {
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  transition: all var(--duration-fast) var(--ease);
+}
+
+.step-card:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.step-card:hover .step-number {
+  transform: scale(1.12) rotate(-5deg);
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+.step-number {
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+/* Testimonial card hover */
+.testimonial-card {
+  transition: all var(--duration-fast) var(--ease);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Feature visual hover (zoom) */
+.feature-visual {
+  transition: box-shadow var(--duration-fast) var(--ease);
+}
+
+.feature-visual:hover {
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(92, 184, 92, 0.1);
+}
+
+/* FAQ item hover */
+.faq-item {
+  transition: box-shadow 400ms var(--ease), transform var(--duration-fast) var(--ease);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateX(4px);
+}
+
+/* Button pulse on CTA */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 4px 16px rgba(92, 184, 92, 0.3); }
+  50% { box-shadow: 0 4px 28px rgba(92, 184, 92, 0.55), 0 0 0 6px rgba(92, 184, 92, 0.1); }
+}
+
+.final-cta .btn-primary {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Nav logo hover */
+.nav-logo img {
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+.nav-logo:hover img {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/* God Mode chip pulse for active chips */
+@keyframes chip-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(122,185,122,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(122,185,122,0); }
+}
+
+.god-chip.active {
+  animation: chip-pulse 2.5s ease-in-out infinite;
+}
+
+.god-chip.active:nth-child(2n) { animation-delay: 0.4s; }
+.god-chip.active:nth-child(3n) { animation-delay: 0.8s; }
+
+/* Hero banner subtle gradient animation */
+@keyframes hero-bg-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #e8e2d8 0%, #f0ebe3 25%, #e5e0d6 50%, #ebe5db 75%, #e8e2d8 100%);
+  background-size: 200% 200%;
+  animation: hero-bg-shift 8s ease infinite;
+}
+
+/* Proof number color on hover */
+.proof-item {
+  transition: transform var(--duration-fast) var(--ease);
+  cursor: default;
+}
+
+.proof-item:hover {
+  transform: scale(1.06);
+}
+
+.proof-item:hover .proof-number {
+  color: var(--green-dark);
+  transition: color var(--duration-fast);
+}
+
+/* Screenshots image hover */
+.screenshots-image {
+  transition: transform var(--duration-fast) var(--ease), box-shadow var(--duration-fast) var(--ease);
+}
+
+.screenshots-image:hover {
+  transform: scale(1.01);
+  box-shadow: var(--shadow-lg), 0 30px 60px rgba(26, 43, 74, 0.15);
 }
