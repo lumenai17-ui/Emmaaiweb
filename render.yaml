@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: emmaaiweb
+    runtime: static
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    routes:
+      - type: rewrite
+        source: /en
+        destination: /en/index.html
+      - type: rewrite
+        source: /en/
+        destination: /en/index.html
+      - type: rewrite
+        source: /en/index
+        destination: /en/index.html
+      - type: rewrite
+        source: /docs
+        destination: /docs.html
+      - type: rewrite
+        source: /licenses
+        destination: /licenses.html
+      - type: rewrite
+        source: /en/docs
+        destination: /en/docs.html
+      - type: rewrite
+        source: /en/licenses
+        destination: /en/licenses.html
