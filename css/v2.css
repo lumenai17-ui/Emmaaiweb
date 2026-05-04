@@ -753,3 +753,156 @@ p { color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
   .reveal, .reveal-left, .reveal-right, .reveal-scale,
   .anim-up { opacity: 1 !important; transform: none !important; }
 }
+
+/* ==========================================
+   SHOWCASE PAGE
+   ========================================== */
+.ss-hero {
+  min-height: calc(100vh - var(--nav-h));
+  padding: 6rem 0 4rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.ss-hero::before {
+  content: '';
+  position: absolute;
+  top: 30%; left: -10%;
+  width: 60%; height: 60%;
+  background: radial-gradient(circle, rgba(92,184,92,0.10), transparent 65%);
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+.ss-hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+.ss-hero-text { max-width: 540px; }
+.ss-hero-text h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  margin: .8rem 0 1.2rem;
+}
+.ss-hero-text p { font-size: 1.15rem; margin-bottom: 2rem; }
+
+.ss-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ss-hero-visual::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(59,111,181,0.20), transparent 65%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+.shot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 32px;
+  box-shadow:
+    0 30px 70px -20px rgba(26,43,74,0.45),
+    0 8px 25px -10px rgba(0,0,0,0.18);
+  background: var(--navy);
+  position: relative;
+  z-index: 1;
+}
+.shot-hero {
+  max-width: 340px;
+  width: 100%;
+  animation: ss-float 8s ease-in-out infinite;
+}
+@keyframes ss-float {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50%      { transform: translateY(-14px) rotate(-1.5deg); }
+}
+
+/* Section block */
+.ss-section { padding: 7rem 0; position: relative; }
+.ss-section.alt { background: var(--bg-alt); }
+.ss-section.dark {
+  background: var(--navy);
+  color: rgba(255,255,255,0.85);
+}
+.ss-section.dark h2,
+.ss-section.dark .eyebrow,
+.ss-section.dark h3,
+.ss-section.dark h4 { color: white; }
+.ss-section.dark p { color: rgba(255,255,255,0.7); }
+
+/* Two-column row (text + 1 shot) */
+.ss-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.ss-row.reverse { direction: rtl; }
+.ss-row.reverse > * { direction: ltr; }
+.ss-text h2 { margin: .6rem 0 1.2rem; }
+.ss-text p  { font-size: 1.08rem; margin-bottom: 1.5rem; }
+.ss-visual { display: flex; justify-content: center; }
+.ss-visual .shot { max-width: 320px; }
+
+/* Triptych — 3 shots */
+.ss-triptych {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+.ss-card { display: flex; flex-direction: column; align-items: center; }
+.ss-card .shot { max-width: 270px; margin-bottom: 1.2rem; }
+.ss-caption {
+  text-align: center;
+  font-family: var(--font-m);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .72rem;
+  color: var(--muted);
+  max-width: 220px;
+}
+.ss-section.dark .ss-caption { color: rgba(255,255,255,0.55); }
+
+/* Pair — 2 shots side by side */
+.ss-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: start;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.ss-pair .shot { max-width: 320px; margin: 0 auto 1.2rem; }
+
+/* Final CTA spacing */
+.ss-final-cta { padding: 7rem 0; text-align: center; }
+
+/* Showcase responsive */
+@media (max-width: 1024px) {
+  .ss-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .ss-hero-text { text-align: center; margin: 0 auto; }
+  .ss-hero-text .hero-ctas { justify-content: center; }
+  .ss-row { grid-template-columns: 1fr; gap: 3rem; }
+  .ss-row.reverse { direction: ltr; }
+  .ss-text { text-align: center; }
+  .ss-triptych { grid-template-columns: 1fr; gap: 3rem; max-width: 320px; margin: 0 auto; }
+  .ss-pair { grid-template-columns: 1fr; max-width: 320px; }
+}
+@media (max-width: 480px) {
+  .ss-section { padding: 4.5rem 0; }
+  .shot, .shot-hero, .ss-visual .shot, .ss-card .shot, .ss-pair .shot { max-width: 280px; }
+}
