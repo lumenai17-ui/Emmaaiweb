@@ -116,9 +116,8 @@
         <a href="#outputs">6. Que Produce (Generadores)</a>
         <a href="#voice">7. Voz e Idiomas</a>
         <a href="#channels">8. Canales de Comunicacion</a>
-        <a href="#google">9. Google Workspace</a>
-        <a href="#godmode">10. God Mode y Telemetria</a>
-        <a href="#build">11. Build y Distribucion</a>
+        <a href="#godmode">9. God Mode y Telemetria</a>
+        <a href="#build">10. Build y Distribucion</a>
       </div>
     </div>
   </section>
@@ -217,7 +216,6 @@
               <li><strong>database/</strong> — Room DB (AgentConfig, ChatThread, Groups)</li>
               <li><strong>email/</strong> — Servicio IMAP/SMTP directo</li>
               <li><strong>files/</strong> — AttachmentManager + PublicFileWriter</li>
-              <li><strong>google/</strong> — Auth + Calendar + Drive + Gmail + Tasks</li>
               <li><strong>llm/</strong> — Providers (OpenRouter, Ollama, Gemma, Custom)</li>
               <li><strong>memory/</strong> — Gestion de memoria por agente</li>
               <li><strong>network/</strong> — Conectividad y fetchers</li>
@@ -300,18 +298,17 @@
             <tr><td>7</td><td>ExportCsvPlugin</td><td>Generacion</td><td>Exportar datos a CSV/XLSX</td></tr>
             <tr><td>8</td><td>ExportPdfPlugin</td><td>Generacion</td><td>Crear PDFs profesionales</td></tr>
             <tr><td>9</td><td>FlashlightPlugin</td><td>OS</td><td>Control de linterna</td></tr>
-            <tr><td>10</td><td>GoogleEcosystemPlugins</td><td>Google</td><td>Gmail + Calendar + Tasks (3-en-1)</td></tr>
-            <tr><td>11</td><td>HTMLForgePlugin</td><td>Generacion</td><td>Landing pages HTML con preview</td></tr>
-            <tr><td>12</td><td>ImageGenerationPlugin</td><td>Multimedia</td><td>10 estilos artisticos via Pollinations</td></tr>
-            <tr><td>13</td><td>MemoryPlugin</td><td>IA</td><td>Busqueda en memoria del agente</td></tr>
-            <tr><td>14</td><td>ReadDocumentPlugin</td><td>Ingestion</td><td>PDF, Excel, CSV, Word reader</td></tr>
-            <tr><td>15</td><td>SystemGodModePlugin</td><td>OS</td><td>WiFi, estado termico, sistema</td></tr>
-            <tr><td>16</td><td>TelemetryQueryPlugin</td><td>Telemetria</td><td>Consulta sensores del dispositivo</td></tr>
-            <tr><td>17</td><td>VolumePlugin</td><td>OS</td><td>Control de volumen</td></tr>
-            <tr><td>18</td><td>WebApiFetcherPlugin</td><td>Red</td><td>Llamadas GET/POST a APIs externas</td></tr>
-            <tr><td>19</td><td>WebScraperPlugin</td><td>Red</td><td>Scraping de contenido web limpio</td></tr>
-            <tr><td>20</td><td>WebSearchPlugin</td><td>Busqueda</td><td>Busqueda web</td></tr>
-            <tr><td>21</td><td>WhatsAppAutomatorPlugin</td><td>Comunicacion</td><td>Envio automatico por WhatsApp</td></tr>
+            <tr><td>10</td><td>HTMLForgePlugin</td><td>Generacion</td><td>Landing pages HTML con preview</td></tr>
+            <tr><td>11</td><td>ImageGenerationPlugin</td><td>Multimedia</td><td>10 estilos artisticos via Pollinations</td></tr>
+            <tr><td>12</td><td>MemoryPlugin</td><td>IA</td><td>Busqueda en memoria del agente</td></tr>
+            <tr><td>13</td><td>ReadDocumentPlugin</td><td>Ingestion</td><td>PDF, Excel, CSV, Word reader</td></tr>
+            <tr><td>14</td><td>SystemGodModePlugin</td><td>OS</td><td>WiFi, estado termico, sistema</td></tr>
+            <tr><td>15</td><td>TelemetryQueryPlugin</td><td>Telemetria</td><td>Consulta sensores del dispositivo</td></tr>
+            <tr><td>16</td><td>VolumePlugin</td><td>OS</td><td>Control de volumen</td></tr>
+            <tr><td>17</td><td>WebApiFetcherPlugin</td><td>Red</td><td>Llamadas GET/POST a APIs externas</td></tr>
+            <tr><td>18</td><td>WebScraperPlugin</td><td>Red</td><td>Scraping de contenido web limpio</td></tr>
+            <tr><td>19</td><td>WebSearchPlugin</td><td>Busqueda</td><td>Busqueda web</td></tr>
+            <tr><td>20</td><td>WhatsAppAutomatorPlugin</td><td>Comunicacion</td><td>Envio automatico por WhatsApp</td></tr>
           </tbody>
         </table>
       </div>
@@ -413,29 +410,10 @@
     </div>
   </section>
 
-  <!-- ====== GOOGLE ====== -->
-  <section class="doc-section" id="google" style="padding: 0 0 2rem; background: var(--bg-alt); padding-top:3rem;">
-    <div class="container">
-      <h2 style="margin-bottom:1.5rem;">9. Google Workspace</h2>
-      <div class="comparison-wrapper">
-        <table class="comparison-table">
-          <thead><tr><th>Servicio</th><th>Modulo</th><th>Capacidades</th></tr></thead>
-          <tbody>
-            <tr><td>Gmail</td><td>GoogleGmailService.kt</td><td>Inbox, Send, Search</td></tr>
-            <tr><td>Calendar</td><td>GoogleCalendarService.kt</td><td>List, Create, Delete events</td></tr>
-            <tr><td>Tasks</td><td>GoogleTasksService.kt</td><td>List, Create, Complete tasks</td></tr>
-            <tr><td>Drive</td><td>GoogleDriveService.kt</td><td>Browse, Upload, Download</td></tr>
-            <tr><td>Auth</td><td>GoogleAuthManager.kt</td><td>OAuth2 Credential Manager + Sign-In</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
   <!-- ====== GOD MODE ====== -->
-  <section class="doc-section" id="godmode" style="padding: 3rem 0 2rem;">
+  <section class="doc-section" id="godmode" style="padding: 3rem 0 2rem; background: var(--bg-alt); padding-top:3rem;">
     <div class="container">
-      <h2 style="margin-bottom:1.5rem;">10. God Mode y Telemetria</h2>
+      <h2 style="margin-bottom:1.5rem;">9. God Mode y Telemetria</h2>
       <div class="doc-grid">
         <div class="doc-card">
           <h3>Scanner Ambiental</h3>
@@ -469,7 +447,7 @@
   <!-- ====== BUILD ====== -->
   <section class="doc-section" id="build" style="padding: 0 0 3rem; background: var(--bg-alt); padding-top:3rem;">
     <div class="container">
-      <h2 style="margin-bottom:1.5rem;">11. Build y Distribucion</h2>
+      <h2 style="margin-bottom:1.5rem;">10. Build y Distribucion</h2>
       <div class="doc-card">
         <div class="comparison-wrapper">
           <table class="comparison-table">
